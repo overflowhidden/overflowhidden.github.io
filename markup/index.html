@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>X-1 Test</title>
+		<link href='https://fonts.googleapis.com/css?family=Questrial|Roboto:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/fontello.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
+		<link href="css/jcf.css" rel="stylesheet">
+</head>
+
+<body ng-app ng-class="theme">
+		<div class="container">
+				<div class="row">
+						<div class="col-md-12">
+								<div class="frame">
+										<div class="row">
+												<aside class="col-md-4 aside">
+														<ul class="nav nav-tabs" role="tablist">
+																<li role="presentation" class="active"><a href="#basics" ng-click="theme = 'theme-basics'" aria-controls="home" role="tab" data-toggle="tab">Basics</a></li>
+																<li role="presentation"><a href="#plans" ng-click="theme = 'theme-plans'" aria-controls="profile" role="tab" data-toggle="tab">Plans</a></li>
+																<li role="presentation"><a href="#account" aria-controls="messages" role="tab" data-toggle="tab">Account & biling</a></li>
+																<li role="presentation"><a href="#expansion" aria-controls="settings" role="tab" data-toggle="tab">Expansion plans</a></li>
+																<li role="presentation"><a href="#polices" aria-controls="settings" role="tab" data-toggle="tab">Polices</a></li>
+																<li role="presentation"><a href="#small-businesses" aria-controls="settings" role="tab" data-toggle="tab">Small businesses</a></li>
+														</ul>
+												</aside>
+												<div class="col-md-8 content">
+														<div class="row">
+																<div class="main col-md-12">
+																		<div class="main-holder clearfix">
+																				<div class="tab-content">
+																						<div role="tabpanel" class="tab-pane fade in active" id="basics">
+																								<form action="#" class="custom-form">
+																										<div class="form-group col-md-11">
+																												<input type="text" class="form-control" id="InputName" placeholder="Full Name">
+																										</div>
+																										<div class="form-group col-md-11">
+																												<select name="Country" class="form-control" id="Country-select">
+																														<option class="jcf-hidden">Select a Country</option>
+																														<option value="">Ukraine</option>
+																												</select>
+																										</div>
+																										<div class="form-group col-md-6">
+																												<input type="text" class="form-control" id="InputZip" placeholder="Postcode / Zip">
+																										</div>
+																										<div class="form-group col-md-12 btn-holder">
+																											<button type="button" class="btn btn-lg btn-success">Next  -  your order</button>
+																										</div>
+																								</form>
+																						</div>
+
+
+
+
+
+																						<div role="tabpanel" class="tab-pane fade" id="plans">
+																							tab2
+																						</div>
+																						<div role="tabpanel" class="tab-pane fade" id="account">tab3</div>
+																						<div role="tabpanel" class="tab-pane fade" id="expansion">tab4</div>
+
+																						<div role="tabpanel" class="tab-pane fade" id="polices">tab5</div>
+
+																						<div role="tabpanel" class="tab-pane fade" id="small-businesses">tab6</div>
+																				</div>
+																		</div>
+																		<footer class="col-md-12 footer">
+																				<div class="footer-holder">
+																						<nav>
+																							<ul>
+																								<li class="phone"><a href="#"><i class="icon-phone"></i>Call us</a></li>
+																								<li class="chat"><a href="#"><i class="icon-wechat"></i>Chat with us</a></li>
+																								<li class="mail"><a href="#"><i class="icon-mail"></i> Email us</a></li>
+																								<li class="users"><a href="#"><i class="icon-users"></i> Community</a></li>
+																							</ul>
+																						</nav>
+																				</div>
+																		</footer>
+																</div>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/custom-select.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js"></script>
+		<script>
+			$scope.myTheme = 'yeti';
+$rootScope.$watch('myTheme', function(value) {
+  if (value != undefined) {
+    $scope.myTheme = value;
+  }
+});
+		</script>
+</body>
+
+</html>
