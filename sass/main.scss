@@ -1,11 +1,15 @@
 
 @import "bootstrap/_variables";
-@import "themes/_plans";
-@import "themes/_account";
-@import "themes/_expansion";
 @import "bootstrap/_mixins";
 @import "_fontello"; 
 @import "_jsf"; 
+
+/*Themes*/
+@import "themes/_plans";
+@import "themes/_account";
+@import "themes/_expansion";
+@import "themes/_polices";
+@import "themes/_business";
 
 body{
 	padding: 40px;
