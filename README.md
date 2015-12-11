@@ -13,25 +13,17 @@ This is the test task for X1-Group.
 This task contain small markup page based on bootstrap, sass, gulpjs and javascript.
 
 
-## Code Example
-
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
-
-## Motivation
-
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
-
 ## Installation
 
 To continue working with this project, please make the following steps:
-1. Install Nodejs https://nodejs.org/en/
-2. Install GulpJS: paste the following code in the command promt $ npm install --global gulp (more info about installation GulpJS you can find here: https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
-3. Clone this project from github to your desktop, enter in folder with project through the console and install all packages that will be need to continue your work with this project:
+- Install Nodejs https://nodejs.org/en/
+- Install GulpJS: paste the following code in the command promt: npm install --global gulp (more info about installation GulpJS you can find here: https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
+- Clone this project from github to your desktop, enter in folder with project through the console and install all packages that will be need to continue your work with this project:
 
 npm install --save-dev gulp gulp-jsmin gulp-sass gulp-livereload gulp-autoprefixer gulp-minify-css gulp-jsmin gulp-rename gulp-connect 
-4. run "gulp" command
-5. Open your browser and paste the url:http://localhost:8080/
-6. Now you can start with your work.
+- run "gulp" command
+- Open your browser and paste the url:http://localhost:8080/
+- Now you can start with your work.
 
 The most important files are:
 - index.html in the root folder 
