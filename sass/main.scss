@@ -1,0 +1,285 @@
+
+@import "bootstrap/_variables";
+@import "themes/_plans";
+@import "themes/_account";
+@import "themes/_expansion";
+@import "bootstrap/_mixins";
+@import "_fontello"; 
+@import "_jsf"; 
+
+body{
+	padding: 40px;
+	background:$gray-base;	
+}
+.aside{
+	padding-bottom: 88px;
+}
+.content{
+	height: 500px;
+}
+.frame{
+	position: relative;
+	&:after{ /*sidebar styles*/
+		content: "";
+		position: absolute;
+		top:5px;
+		width: 100%;
+		max-width: 358px;
+		left: 0;
+		min-height: 400px;
+		bottom: 0;
+		background:$dark-grey; 
+		z-index: -1;
+		@include base-box-shadow;
+	}
+}
+.main{
+	position: relative;
+	z-index: 1;
+	padding: 0 20px 50px 0;
+	&:after{ /*Blue box with footer*/
+		content: "";
+		position: absolute;
+		top:77px;
+		left: -17px;
+		right: 14px;
+		bottom: 0;
+		background:$base-blue; 
+		z-index: -1;
+		@include base-box-shadow;
+	}
+	.main-holder{/*main content box*/
+		margin: -16px 20px 0 -42px;
+		background: $white-base;
+		padding: 51px 35px 30px 70px;
+		position: relative;
+		z-index: 2;
+		min-height: 400px;
+		@include base-box-shadow;
+	}
+}
+
+/*Nav tabs styles*/
+.nav-tabs {
+	margin-top: 28px;
+	margin-left: -14px;
+	font-family:$font-family-questrial;
+	font-size:20px;
+	&>li{
+		float: none;
+		text-transform: uppercase;
+		margin-bottom: -6px;
+		@include text-nav-shadow;
+		&>a{
+			border:solid transparent;
+			border-width: 0 0 0 14px;
+			border-radius: 0;
+			padding: 31px 0 30px 86px;
+			margin-right: 0 !important;
+			outline:none;
+			&:hover{
+				border: solid $base-blue;
+				border-width: 0 0 0 14px;
+				@include text-nav-shadow-active;
+				position: relative;
+				z-index: 3;
+				font-weight:600;
+			}
+		}
+		&.active{
+			&>a{
+				border: solid $base-blue;
+				border-width: 0 0 0 14px;
+				@include text-nav-shadow-active;
+				position: relative;
+				z-index: 2;
+				font-weight:600;
+				&:focus,
+				&:hover{
+					border-width: 0 0 0 14px;
+				}
+			}
+		}
+	}
+	&>li.active>a{
+		@include base-box-shadow;
+	}
+
+}
+/*End of Nav tabs styles*/
+
+
+/*Form elements styles*/
+.form-control{
+	@include box-shadow-inputs;
+	padding-left: 50px ;
+}
+.btn{
+	text-transform: uppercase;
+	font-size:$btn-base-font-size;
+	@include box-shadow-inputs;
+	&.btn-lg{
+		padding:25px 38px 22px 35px;
+		word-spacing:2px;
+		letter-spacing:1px;
+	}
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+label{
+	width: 100%;
+}
+/*End of form styles*/
+
+/*footer*/
+.footer{
+	position: relative;
+	.footer-holder{
+		padding: 42px 0 0 36px;
+	}
+	ul{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		li{
+			float: left;
+			font-family:$font-family-questrial;
+			text-transform: uppercase;
+			font-size: 20px;
+		}
+	}
+	
+	.phone {
+		padding: 0 27px 0 0;
+		a{
+			padding: 0 0 0 39px;
+		}
+	}
+
+	.chat {
+		padding: 0 18px 0 0;
+			a{
+			padding: 0 0 0 43px;
+		}
+	}
+
+	.mail {
+		padding: 0 28px 0 0;
+			a{
+			padding: 0 0 0 46px;
+		}
+	}
+
+	.users {
+			a{
+			padding: 0 0 0 40px;
+		}
+	}
+
+	a{
+		color: $white-base;
+		position: relative;
+		&:hover{
+			text-decoration: underline;
+		}
+		i{
+			position: absolute;
+			left:0;
+			top:0;
+			font-size: 28px;
+			&.icon-phone{
+				top:-7px;
+			}
+			&.icon-wechat{
+				top:-8px;
+			}
+			&.icon-mail{
+				top:-9px;
+			}
+			&.icon-users{
+				top:-8px;
+			}
+		}
+	}
+}
+@media (max-width: 1200px) {
+	.nav-tabs > li > a{
+		padding: 10px 0 10px 26px;
+	}
+	.footer{ 
+		.footer-holder{
+			padding-left: 0;
+		
+			li{
+				font-size: 16px;
+				a{padding-left: 30px !important;}
+				i{
+					font-size: 20px;
+					top:-5px !important;
+				}
+			}
+		}	
+	}	
+}
+@media (max-width: 992px) {
+	body{padding: 0;} 
+	.frame{
+		position: relative;
+		&:after{
+			max-width: 100%;
+		}
+	}
+	.form-control{
+		height: 50px;
+		line-height: 40px;
+		padding-left: 10px;
+		padding-top: 5px;
+	}
+	.jcf-select{
+		height: 50px;
+		line-height: 44px;
+		.jcf-select-text{
+			line-height: 38px;
+			padding-left: 4px;
+			padding-top: 5px;
+			
+		}
+		.jcf-select-opener{
+			width: 45px;
+			&:before{
+				left:50%;
+				top:50%;
+				margin: -22px 0 0 -9px;
+			}
+		}
+
+	}
+	.aside{	padding-bottom: 28px;}
+	.main{
+		padding: 0; 
+		padding-bottom: 50px;
+			.main-holder{
+				margin: 0;
+				padding-left: 35px;
+			}
+		&:after{
+			right:0
+		}
+		
+	}
+	
+}
+@media (max-width: 768px) {
+	.btn{font-size: 16px; padding: 10px !important;}
+	.footer .footer-holder {
+   		padding: 32px 0 10px 36px;
+	}
+	
+}
+ 
+
+
+

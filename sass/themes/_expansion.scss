@@ -1,0 +1,27 @@
+@mixin placeholder-input{
+	&::-webkit-input-placeholder {
+	   color:$white-base;
+	}
+	&::-moz-placeholder {
+	    color:$white-base;
+	}
+	&:-ms-input-placeholder {  
+	    color:$white-base;
+	}
+}
+
+body.theme-expansion{
+	.form-control{
+		background: $brand-success;
+		color: $white-base ;
+		@include placeholder-input;
+	}
+	.btn-success{
+		background: $gray;
+		border-color: darken($gray, 60%);
+	}
+	.jcf-select{
+		background: $brand-success;
+		color:$white-base;
+	}
+}

@@ -1,0 +1,93 @@
+$input-height-plans:38px;
+$input-font-size-plans:18px;
+$input-border-color: #dadada;
+@import "bootstrap/mixins/_shadow";
+.input-plans{
+	border:0;
+	border-bottom: 1px solid $input-border-color;
+	padding-left: 3px;
+	height: $input-height-plans;
+	font-size: $input-font-size-plans;
+	font-weight: normal;
+	box-shadow:none;
+	background: none;
+	border-radius: 0;
+}
+@mixin placeholder-input{
+	&::-webkit-input-placeholder {
+	   color:$black-base;
+	}
+	&::-moz-placeholder {
+	    color:$black-base;
+	}
+	&:-ms-input-placeholder {  
+	    color:$black-base;
+	}
+}
+.theme-plans {
+	.form-group{display: table; width: 100%;}
+	input.form-control{
+		@extend .input-plans;
+		@include placeholder-input;
+		display: table-footer-group;
+		color:$black-base;
+		&:focus+label {
+			color: $base-blue !important;	
+		}
+		
+	}
+
+	label{
+		font-size: 14px;
+		font-weight: normal;
+		display: table-header-group;
+	}
+	.jcf-select {
+		box-shadow: none;
+		background: $white-base;
+		height: 38px;
+
+		.jcf-select-text {
+			@extend .input-plans;
+			line-height: 38px;
+			color: $black-base;
+			margin: 0;
+		}
+		.jcf-select-opener {
+			width: 30px;
+			background:none;
+			border-bottom: 1px solid $input-border-color;
+			&:before{
+				content:"";
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 8px 7px 0 7px;
+				border-color: #191919 transparent transparent transparent;
+				position: absolute;
+				left:50%;
+				top: 50%;
+				margin: -4px 0 0 -7px;
+			}
+		}
+		.jcf-select-form-control{
+			
+		}
+		&.jcf-focus+label {
+			color: $base-blue !important;	
+		}
+	}
+	.btn{
+		text-transform: uppercase;
+		font-size:$btn-base-font-size;
+		@include box-shadow-inputs;
+		&.btn-primary{
+			@include box-shadow-inputs-plans;
+		}
+		&.btn-sm{
+			padding:15px 16px 12px 16px;
+			word-spacing:0;
+			letter-spacing:0;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+body.theme-account{
+	.form-control{
+		background: $gray;
+	}
+	.btn-success{
+		background: $base-blue;
+		border-color: darken($base-blue, 20%);
+	}
+	.jcf-select{
+		background: $gray;	
+	}
+}

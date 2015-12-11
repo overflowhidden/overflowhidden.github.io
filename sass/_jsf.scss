@@ -1,0 +1,235 @@
+/* custom select styles */
+.jcf-select {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.15);
+	background: #f8f8f8;
+	margin: 0 0 12px;
+	min-width: 150px;
+	height: 82px;
+	width: 100%;
+	border-radius: 3px;
+	select { 
+		z-index: 1;
+		left: 0;
+		top: 0;
+	}
+	.jcf-select-text {
+		text-overflow:ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		cursor: default;
+		display: block;
+		font-size: 22px;
+		line-height: 82px;
+		margin: 0 35px 0 8px;
+		padding-left: 44px;
+	}
+	.jcf-select-opener {
+		position: absolute;
+		text-align: center;
+		background: #38474f;
+		width: 75px;
+		bottom: 0;
+		right: 0;
+		top: 0;
+		border-radius: 0 3px 3px 0;
+	}
+	.jcf-select-opener{
+		&:before{
+			position: absolute;
+			left:29px;
+			top:28px;
+			font-size: 19px;
+			color: #fff;
+			font-family: "fontello";
+		}
+	}
+	.jcf-select-drop {
+		position: absolute;
+		margin-top: 0px;
+		z-index: 9999;
+		top: 100%;
+		left: -1px;
+		right: -1px;
+		border: 1px solid $dark-grey;
+		border-top: 0;
+		.jcf-select-drop-content {
+			
+
+		}
+	}
+	.jcf-drop-flipped {
+		bottom: 100%;
+		top: auto;
+
+	}
+}
+
+
+body > .jcf-select-drop {
+	position: absolute;
+	margin: 0 0 0;
+	z-index: 9999;
+
+}
+body > .jcf-select-drop.jcf-drop-flipped {
+	margin: 1px 0 0;
+
+}
+
+
+/* multiple select styles */
+.jcf-list-box {
+	overflow: hidden;
+	display: inline-block;
+	border: 1px solid #b8c3c9;
+	min-width: 200px;
+	margin: 0 15px;
+
+}
+/* select options styles */
+.jcf-list {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	background: #fff;
+	line-height: 14px;
+	font-size: 16px;
+	width: 100%;
+	border: 1px solid $gray-base ;
+	border-top: 0;
+	.jcf-list-content {
+		vertical-align: top;
+		display: inline-block;
+		overflow: auto;
+		width: 100%;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li {
+			overflow: hidden;
+			display: block;
+
+		}
+
+	}
+	.jcf-overflow {
+		overflow: auto;
+	}
+	.jcf-option {
+		white-space: nowrap;
+		overflow: hidden;
+		cursor: default;
+		display: block;
+		padding: 15px 9px;
+		color: #656565;
+		height: 1%;
+	}
+	.jcf-disabled {
+		background: #fff !important;
+		color: #aaa !important;
+	}
+	.jcf-optgroup-caption {
+		white-space: nowrap;
+		font-weight: bold;
+		display: block;
+		padding: 15px 9px;
+		cursor: default;
+		color: #000;
+	}
+	.jcf-optgroup .jcf-option {
+		padding-left: 30px;
+	}
+}
+
+.jcf-select-drop .jcf-hover,
+.jcf-list-box .jcf-selected {
+	background: #e6e6e6;
+	color: #000;
+}
+
+/* custom scrollbars styles */
+.jcf-scrollable-wrapper {
+	box-sizing: content-box;
+	position: relative;
+}
+
+.jcf-scrollbar-vertical {
+	position: absolute;
+	cursor: default;
+	background: #e3e3e3;
+	width: 14px;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	.jcf-scrollbar-dec,
+	.jcf-scrollbar-inc {
+		background: #bbb;
+		height: 14px;
+		width: 14px;
+		left: 0;
+		top: 0;
+	}
+	.jcf-scrollbar-inc {
+		top: auto;
+		bottom: 0;
+	}
+	.jcf-scrollbar-handle {
+		background: #888;
+		height: 1px;
+		width: 14px;
+	}
+}
+
+.jcf-scrollbar-horizontal {
+	position: absolute;
+	background: #e3e3e3;
+	right: auto;
+	top: auto;
+	left: 0;
+	bottom: 0;
+	width: 1px;
+	height: 14px;
+	.jcf-scrollbar-dec,
+	.jcf-scrollbar-inc {
+		display: inline-block;
+		vertical-align: top;
+		overflow: hidden;
+		background: #bbb;
+		height: 14px;
+		width: 14px;
+	}
+	.jcf-scrollbar-inc {
+		left: auto;
+		right: 0;
+	}
+	.jcf-scrollbar-slider {
+		display: inline-block;
+		position: relative;
+		height: 14px;
+	}
+	.jcf-scrollbar-handle {
+		position: absolute;
+		background: #888;
+		height: 14px;
+	}
+}
+
+.jcf-scrollbar{
+	&.jcf-inactive {
+		.jcf-scrollbar-handle {
+			visibility: hidden;
+		}
+		.jcf-scrollbar-dec, 
+		.jcf-scrollbar-inc {
+			background: #e3e3e3;
+		}
+	}
+}
+
+/* common custom form elements styles */
+.jcf-disabled {background: #ddd !important;}
