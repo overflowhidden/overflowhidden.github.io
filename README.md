@@ -14,7 +14,6 @@ To continue work with this project, please make the following steps:
 - Install GulpJS: paste the following code in the command promt: npm install --global gulp (more info about of gulpJS installation  you can find here: https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
 - Clone this project from github to your desktop, enter the folder project through the console and install all packages that need to continue to your work with this project:
 
-npm install --save-dev gulp gulp-jsmin gulp-sass gulp-livereload gulp-autoprefixer gulp-minify-css gulp-jsmin gulp-rename gulp-connect 
 - Run "gulp" command
 - Open your browser and paste the url:http://localhost:8080/
 - Now you can start with your work.
